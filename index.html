@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Números</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="game-container" id="game">
+        <h2>🎯 Adivina el número</h2>
+        <p class="subtitulo">Rango: 1 – 100 | Intentos: 5</p>
+
+        <input type="number" id="numero" placeholder="Ingresa un número">
+        
+        <div class="buttons">
+            <button id="btnIntentar">Intentar</button>
+            <button id="btnReiniciar">Reiniciar</button>
+        </div>
+
+        <p id="mensaje" class="mensaje"></p>
+        <p id="intentos"></p>
+
+        <h4>📜 Historial</h4>
+        <ul id="historial"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

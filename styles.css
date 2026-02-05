@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.game-container {
+    background: white;
+    padding: 30px;
+    width: 320px;
+    height: 520px; /* 🔒 altura fija */
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.subtitulo {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2a5298;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.3s;
+}
+
+#btnIntentar:disabled {
+    background: #ccc;
+    color: #677;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#btnReiniciar {
+    background: #777;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.mensaje {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-height: 120px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+li {
+    background: #f1f1f1;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+button:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.game-over #btnReiniciar {
+    background: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+}
+
+.game-over #btnReiniciar:hover {
+    transform: scale(1.1);
+}
+
+#historial {
+    flex: 1;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#historial li {
+    background: #f1f1f1;
+    margin: 5px 0;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
