@@ -1,6 +1,6 @@
 let numeroSecreto;
 let intentos;
-const maxIntentos = 5;
+const maxIntentos = 10;
 
 const input = document.getElementById("numero");
 const mensaje = document.getElementById("mensaje");
@@ -81,3 +81,4 @@ input.addEventListener("keydown", function (event) {
 
 // Iniciar al cargar
 iniciarJuego();
+
