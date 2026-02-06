@@ -9,6 +9,20 @@ const botonIntentar = document.getElementById("btnIntentar");
 const botonReiniciar = document.getElementById("btnReiniciar");
 const historial = document.getElementById("historial");
 const game = document.getElementById("game");
+const cortina = document.getElementById("cortina");
+const btnComenzar = document.getElementById("btnComenzar");
+
+input.disabled = true;
+botonIntentar.disabled = true;
+
+btnComenzar.addEventListener("click", () => {
+    cortina.classList.add("slide-up");
+
+    setTimeout(() => {
+        cortina.style.display = "none";
+        iniciarJuego();
+    }, 700);
+});
 
 function iniciarJuego() {
     numeroSecreto = Math.floor(Math.random() * 100) + 1;

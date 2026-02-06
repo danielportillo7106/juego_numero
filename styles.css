@@ -3,6 +3,59 @@
     font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
+#cortina {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: opacity 0.6s ease;
+}
+
+.cortina-contenido {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    animation: aparecer 0.6s ease;
+}
+
+#btnComenzar {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+}
+
+#btnComenzar:hover {
+    transform: scale(1.50);
+}
+
+#cortina {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    transform: translateY(0);
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+#cortina.slide-up {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
 body {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     min-height: 100vh;
@@ -16,7 +69,7 @@ body {
     background: white;
     padding: 30px;
     width: 320px;
-    height: 520px; /* 🔒 altura fija */
+    height: 500px; /* 🔒 altura fija */
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -65,10 +118,23 @@ button {
 
 #btnIntentar:disabled {
     background: #ccc;
-    color: #677;
+    color: #667;
     cursor: not-allowed;
-    box-shadow: none;
     transform: none;
+    box-shadow: none;
+}
+
+#btnIntentar {
+    background: #28a745;
+    color: white;
+    opacity: 0.7;
+}
+
+.game-over #btnIntentar {
+    transform: none;
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
 }
 
 #btnReiniciar {
