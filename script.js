@@ -81,4 +81,3 @@ input.addEventListener("keydown", function (event) {
 
 // Iniciar al cargar
 iniciarJuego();
-
